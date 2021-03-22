@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <form action="" autocomplete="off">
+      <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./userList.html">User List <span class="sr-only"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+          <div id="message" style="display: none;" class="mt-2">
+            <div class="alert alert-success" role="alert">
+                <strong id="msg"></strong>
+            </div>
+          </div>
+
+        <div class="row pt-4">
+            <div class="col-lg-3 col-md-3">
+
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="card text-left">
+                  <div class="card-body">
+                    <h4 class="card-title">Register Here..</h4>
+                    <p class="card-text">
+                        <div class="form-group">
+                          <label for="uname">Username</label>
+                          <input type="text"
+                            class="form-control" name="uname" id="uname" required>
+                            <small id="unameErr" class="form-text text-danger" style="display: none;">UserName Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="uemail">Email</label>
+                            <input type="text" 
+                              class="form-control" name="uemail" id="uemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                              title="email must be in correct form" required>
+                              <small id="uemailErr" class="form-text text-danger" style="display: none;">UserEmail Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ucemail">Confirm Email</label>
+                            <input type="text" 
+                              class="form-control" name="ucemail" id="ucemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                              title="email must be in correct form" required>
+                              <small id="uemailconfirmErr" class="form-text text-danger" style="display: none;">Confirm Email Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="udegree">Graduation Degree</label>
+                            <select id="udegree" class="form-control">
+                                <option value="Select Degree">Select Degree</option>
+                                <option value="BCA">BCA</option>
+                                <option value="Bsc">Bsc</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="Others">Others</option>
+                            </select>
+                            <small id="udegreeErr" class="form-text text-danger" style="display: none;">User Degree Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="userBday">Birth Date</label>
+                            <input type="date"
+                              class="form-control" name="userBday" id="userBday" aria-describedby="helpId" placeholder="">
+                              <small id="ubdayErr" class="form-text text-danger" style="display: none;">BirthDate Must Required</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="ucountry">Country</label>
+                            <select id="ucountry" class="form-control">
+                                <option value="Select Country">Select Country</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                            <small id="ucountryErr" class="form-text text-danger" style="display: none;">User Country Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ustate">State</label>
+                            <select id="ustate" class="form-control">
+                                <option value="Select State">Select State</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Goa">Goa</option>
+                            </select>
+                            <small id="ustateErr" class="form-text text-danger" style="display: none;">User State Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="ucity">City</label>
+                            <input type="text"
+                              class="form-control" name="ucity" id="ucity" required>
+                              <small id="ucityErr" class="form-text text-danger" style="display: none;">UserCity Must Required</small>
+                        </div>
+                        <div class="form-group">
+                            <button type="button"  class="btn btn-warning btn-block" onclick="register()" id="regbtn">Register</button>    
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+
+            </div>
+        </div>
+      </div>
+    </form>
+      <script src="./js/index.js" type="text/javascript"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
